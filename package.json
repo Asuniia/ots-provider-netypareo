@@ -1,0 +1,64 @@
+{
+  "name": "@studentsphere/ots-provider-example",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Example implementation of a Open Timetable Scrapper Provider",
+  "author": {
+    "name": "StudentSphere",
+    "email": "contact@studentsphere.app",
+    "url": "https://studentsphere.app"
+  },
+  "social": {
+    "x": "https://x.com/studentsphere-app",
+    "linkedin": "https://linkedin.com/in/studentsphere-app",
+    "discord": "https://discord.gg/n4r6QrhvYj"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/studentsphere-app/ots-provider-example#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studentsphere-app/ots-provider-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/studentsphere-app/ots-provider-example/issues"
+  },
+  "keywords": [
+    "ots",
+    "provider",
+    "example",
+    "studentsphere",
+    "timetable"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/index.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "watch": "tsc -b -w",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@studentsphere/ots-core": "^1.0.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4",
+    "typescript": "^5.0.0"
+  }
+}
